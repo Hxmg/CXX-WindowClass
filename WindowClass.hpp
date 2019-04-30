@@ -1,3 +1,7 @@
+/*
+		用C++封装的一个Win32窗口类，特点是窗口过程处理函数是一个类非静态成员
+						By:Hxmg --- (*･ω-q) 
+*/
 
 #ifndef __WINDOWCLASS_H__
 #define __WINDOWCLASS_H__
