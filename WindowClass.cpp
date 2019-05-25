@@ -131,11 +131,8 @@ LRESULT CALLBACK Window::StaticWndProc(HWND hWnd,UINT message, WPARAM wParam, LP
 			//SetWindowText(hWnd, t);
 			break; 
 	}
-	if(returnVal == 0)
-		return DefWindowProc(hWnd,message,wParam,lParam);
-	else{
-		return returnVal;
-	}
+
+	return returnVal;
 }
 
 LRESULT CALLBACK Window::InitWndProc(HWND hWnd,UINT message ,WPARAM wParam ,LPARAM lParam) {
@@ -166,7 +163,7 @@ LRESULT CALLBACK Window::InitWndProc(HWND hWnd,UINT message ,WPARAM wParam ,LPAR
 
 
 LRESULT  Window::WndProc(HWND hWnd,UINT message ,WPARAM wParam ,LPARAM lParam) {
-	return DefWindowProc(this->m_HWnd,message,wParam,lParam);
+	return DefWindowProc(hWnd,message,wParam,lParam);
 }
 
 bool Window::SetClientSize(int cWidth ,int cHeight) {
