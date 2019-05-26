@@ -12,10 +12,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	MSG msg{};
 
-	while (GetMessage(&msg, NULL, 0, 0) > 0)
+	while (0 < GetMessage(&msg, NULL, 0, 0))
 	{
-		TranslateMessage(&msg);    //×ª»»
-		DispatchMessage(&msg);     //·Ö·¢
+		TranslateMessage(&msg);    
+		DispatchMessage(&msg);     
 	}
 	return 0;
 }
